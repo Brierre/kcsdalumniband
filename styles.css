@@ -1,0 +1,210 @@
+html {
+    text-align: center;
+    background-color: lavender;
+}
+
+body {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+/* margin: 1rem 5rem 1rem 5rem; */
+/* mqrgin: 1rem 5rem */
+}
+
+p, li {
+    font-family: "Instrument Serif", serif;
+    font-size: 20px;
+    list-style-position: inside;
+}
+
+h1 {
+    font-family: "Playfair Display", italic;
+    filter:drop-shadow(2px 2px 1px lightsteelblue);
+}
+
+h2 {
+    font-family: "Playfair Display", italic;
+}
+
+img {
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px 1px rgba(0,0,0,.5);
+}
+
+nav {
+    background-color: lightsteelblue;
+    font-family: 'Bebas Neue';
+}
+
+button {
+    padding: 10px;
+    background-color: lightslategray;
+    font-family: 'Bebas Neue';
+    font-size: medium;
+}
+
+button:hover {
+    font-family: 'Bebas Neue';
+    font-size: medium;
+    background-color: lightsteelblue;
+}
+
+#greeting {
+    background-color: lightsteelblue;
+    border-style: solid;
+    border-color: black;
+    border-radius: 3px;
+    border-width:2px;
+}
+
+#why-band {
+    text-align: left;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 20px;
+    border-color: lightsteelblue;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgba(176, 196, 222, 0.7);
+    background-image: url("images/vector-music-notes-and-signs-set-seamless-pattern-music-symbol-tile-backdrop.jpg");
+    background-repeat: repeat; 
+    background-blend-mode: screen; 
+}
+
+input[type=text] {
+    border: 2px solid lightsteelblue;
+    border-radius: 3px;
+    caret-color: lightsteelblue;
+}
+
+input[type=submit] {
+    background-color: lightsteelblue;
+    border-radius: 3px;
+    border: 2px solid lightsteelblue;
+}
+
+#commentbox {
+    resize:both;
+    border-radius: 3px;
+    border: 2px solid lightsteelblue;
+    caret-color: lightsteelblue;
+}
+
+/* begin horizontal rule with center image */
+.hr-with-image {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hr-with-image::before,
+.hr-with-image::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    height: 1px;
+    background-color: #000;
+}
+
+.hr-with-image::before {
+    right: 50%;
+}
+
+.hr-with-image::after {
+    left: 50%;
+}
+
+.hr-with-image img {
+    position: relative;
+    align-items: center;
+    top: 3px;
+    rotate: -10deg;
+    padding: 0 10px;
+    background-color: #fff;
+    box-shadow: none;
+}
+/* end horizontal rule with center image */
+
+#bandtable {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+#bandtable td, #bandtable th {
+    border: 2px solid lightsteelblue;
+    padding: 5px;
+}
+
+#bandtable tr:nth-child(even) {
+    background-color: rgb(199, 209, 223);
+}
+
+#bandtable tr:hover {
+    background-color: rgb(168, 192, 224); /* how to highlight only one box on hover */
+}
+
+#bandtable th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgb(139, 175, 221);
+    color: white;
+}
+
+#bandtablediv {
+    margin: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: solid lightsteelblue 5px;
+}
+
+.instphotos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+.gallery:hover {
+    border: 1px solid #777;
+}
+
+.gallery img {
+    width: 80%;
+    height: auto;
+}
+
+.desc {
+    text-align: center;
+}
+
+.photoslast {
+    position: absolute;
+    bottom: 30px;
+    width: 90%; /* why is this 90% */
+}
+
+.photosfooter {
+    position: absolute;
+    bottom: 5px;
+    width: 90%; /* why is this 90% */
+}
+
+footer {
+    background-color: lightsteelblue;
+    font-family: 'Bebas Neue';
+    margin: 5px;
+}
+

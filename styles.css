@@ -1,3 +1,10 @@
+/* TO-DO: 
+    staff photos uploaded for page
+    make photos footer appear at the bottom of the contact page, leaving space?
+    responsive for other devices: contact form, why band, table, any place with photos, 
+    fix horizontal rule so the line doesn't begin so close to the right of the image
+    find another clarinet photo or edit image to same shape as others so it centers ok
+*/
 html {
     text-align: center;
     background-color: white;
@@ -10,6 +17,10 @@ body {
     margin-right: 5rem;
 /* margin: 1rem 5rem 1rem 5rem; */
 /* margin: 1rem 5rem */
+}
+
+a:visited {
+    color:  darkslateblue;
 }
 
 p, li {
@@ -27,7 +38,7 @@ h2 {
     font-family: "Playfair Display", italic;
 }
 
-img {
+img { /* make responsive */
     margin: 1rem;
     border-radius: 1rem;
     box-shadow: 2px 2px 2px 1px rgba(0,0,0,.5);
@@ -38,7 +49,7 @@ nav {
     font-family: 'Bebas Neue';
 }
 
-button {
+button { 
     padding: 10px;
     background-color: lightslategray;
     font-family: 'Bebas Neue';
@@ -59,7 +70,7 @@ button:hover {
     border-width:2px;
 }
 
-#why-band {
+#why-band { /* make responsive */
     text-align: left;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -76,18 +87,21 @@ button:hover {
 }
 
 input[type=text] {
+    font-family: "Instrument Serif", serif;
     border: 2px solid lightsteelblue;
     border-radius: 3px;
     caret-color: lightsteelblue;
 }
 
 input[type=submit] {
+    font-family: "Instrument Serif", serif;
     background-color: lightsteelblue;
     border-radius: 3px;
     border: 2px solid lightsteelblue;
 }
 
-#commentbox {
+#commentbox { /* make responsive */
+    font-family: "Instrument Serif", serif;
     resize:both;
     border-radius: 3px;
     border: 2px solid lightsteelblue;
@@ -95,6 +109,7 @@ input[type=submit] {
 }
 
 /* begin horizontal rule with center image */
+/* How to move the right side line over beyond the edge of the trumpet image */
 .hr-with-image {
     position: relative;
     text-align: center;
@@ -130,7 +145,7 @@ input[type=submit] {
 }
 /* end horizontal rule with center image */
 
-#bandtable {
+#bandtable { /* make responsive */
     border-collapse: collapse;
     table-layout: fixed;
     width: 100%;
@@ -145,8 +160,8 @@ input[type=submit] {
     background-color: rgb(199, 209, 223);
 }
 
-#bandtable tr:hover {
-    background-color: rgb(168, 192, 224); /* how to highlight only one box on hover */
+#bandtable td:hover {
+    background-color: rgb(168, 192, 224);
 }
 
 #bandtable th {
@@ -166,40 +181,57 @@ input[type=submit] {
 .instphotos {
     display: flex;
     justify-content: center;
+    justify-content:  space-between;
     align-items: center;
+    
 }
 
 
 .gallery {
-    margin: 5px;
+    margin: 10px;
     border: 1px solid #ccc;
     float: left;
-    width: 180px;
+    width: 200px;
 }
 
 .gallery:hover {
     border: 1px solid #777;
 }
 
+.thumbnail {
+    background-color: white;
+    width: 180px;
+    max-height: 150px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 .gallery img {
-    width: 80%;
-    height: auto;
+    width: 100%;
+    max-height: 150px;
 }
 
 .desc {
+    font-family: "Instrument Serif", serif;
     text-align: center;
+    resize: vertical;
+    height: 60px;
 }
 
-.photoslast {
-    position: absolute;
+.photoslast { /* make responsive */
+    position: static;
     bottom: 30px;
-    width: 90%; /* why is this 90% */
+    width: 100%;
 }
 
-.photosfooter {
-    position: absolute;
+.photosfooter { /* make responsive */
+    position:static;
     bottom: 5px;
-    width: 90%; /* why is this 90% */
+    width: 100%;
+    background-color: lightsteelblue;
+    font-family: 'Bebas Neue';
 }
 
 footer {

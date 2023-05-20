@@ -1,6 +1,6 @@
 /* TO-DO: 
     add a banner photo/logo instead of the school mascot photos at the top
-    staff photos uploaded for organizers page
+    staff photos uploaded for organizers page (make placeholder box?)
     make photo gallery photos end so that there is space between them and the footer
     have photos footer centered properly underneath the photos
     make photos NOT extend beyond the boxes
@@ -201,6 +201,7 @@
         border: 1px solid #ccc;
         float: left;
         width: 200px;
+        background-color: lightgray;
     }
     
     .gallery:hover {
@@ -208,17 +209,7 @@
     }
     
     .thumbnail {
-        background-color: white;
         width: 180px;
-        max-height: 150px;
-        display: inline-block;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-    }
-    
-    .gallery img {
-        width: 100%;
         max-height: 150px;
     }
     
@@ -236,9 +227,9 @@
     }
     
     .photosfooter { /* make responsive */
-        position:static;
-        bottom: 5px;
-        width: 100%;
+        display: grid;
+        justify-items: center;
+        place-items: bottom;
         background-color: lightsteelblue;
         font-family: 'Bebas Neue';
     }

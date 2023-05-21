@@ -1,238 +1,245 @@
 /* TO-DO: 
     add a banner photo/logo instead of the school mascot photos at the top
     staff photos uploaded for organizers page (make placeholder box?)
-    make photo gallery photos end so that there is space between them and the footer
-    have photos footer centered properly underneath the photos
-    make photos NOT extend beyond the boxes
     responsive for other devices: contact form, why band, table, any place with photos, 
-    fix horizontal rule so the line doesn't overlap with the right side of the image
     do the highlighted instruments do anything? pop up image of instrument or equipment? play a note?
     */
     
-    html {
-        text-align: center;
-        background-color: white;
-    }
+html {
+    text-align: center;
+    background-color: white;
+}
+
+body {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+/* margin: 1rem 5rem 1rem 5rem; */
+/* margin: 1rem 5rem */
+}
+
+a:visited {
+    color:  darkslateblue;
+}
+
+p, li {
+    font-family: "Instrument Serif", serif;
+    font-size: 20px;
+    list-style-position: inside;
+}
+
+h1 {
+    font-family: "Playfair Display", italic;
+    filter:drop-shadow(2px 2px 1px lightsteelblue);
+}
+
+h2 {
+    font-family: "Playfair Display", italic;
+}
+
+img { /* make responsive */
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px 1px rgba(0,0,0,.5);
+}
+
+nav {
+    background-color: lightsteelblue;
+    font-family: 'Bebas Neue';
+}
+
+footer {
+    background-color: lightsteelblue;
+    font-family: 'Bebas Neue';
+    margin: 5px;
+}
+
+button { 
+    padding: 10px;
+    background-color: lightslategray;
+    font-family: 'Bebas Neue';
+    font-size: medium;
+}
+
+button:hover {
+    font-family: 'Bebas Neue';
+    font-size: medium;
+    background-color: lightsteelblue;
+}
+
+input[type=text] {
+    font-family: "Instrument Serif", serif;
+    border: 2px solid lightsteelblue;
+    border-radius: 3px;
+    caret-color: lightsteelblue;
+}
+
+input[type=submit] {
+    font-family: "Instrument Serif", serif;
+    background-color: lightsteelblue;
+    border-radius: 3px;
+    border: 2px solid lightsteelblue;
+}
+
+#greeting {
+    background-color: lightsteelblue;
+    border-style: solid;
+    border-color: black;
+    border-radius: 3px;
+    border-width:2px;
+}
+
+#bandtable { /* make responsive */
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+#bandtable td, #bandtable th {
+    border: 2px solid lightsteelblue;
+    padding: 5px;
+}
+
+#bandtable tr:nth-child(even) {
+    background-color: rgb(199, 209, 223);
+}
+
+#bandtable td:hover {
+    background-color: rgb(168, 192, 224);
+}
+
+#bandtable th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgb(139, 175, 221);
+    color: white;
+}
+
+#bandtablediv {
+    margin: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: solid lightsteelblue 5px;
+}
+
+#instphotos {
+    display: flex;
+    justify-content: center;
+    justify-content:  space-around;
+    align-items: center;
     
-    body {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        margin-left: 5rem;
-        margin-right: 5rem;
-    /* margin: 1rem 5rem 1rem 5rem; */
-    /* margin: 1rem 5rem */
-    }
-    
-    a:visited {
-        color:  darkslateblue;
-    }
-    
-    p, li {
-        font-family: "Instrument Serif", serif;
-        font-size: 20px;
-        list-style-position: inside;
-    }
-    
-    h1 {
-        font-family: "Playfair Display", italic;
-        filter:drop-shadow(2px 2px 1px lightsteelblue);
-    }
-    
-    h2 {
-        font-family: "Playfair Display", italic;
-    }
-    
-    img { /* make responsive */
-        margin: 1rem;
-        border-radius: 1rem;
-        box-shadow: 2px 2px 2px 1px rgba(0,0,0,.5);
-    }
-    
-    nav {
-        background-color: lightsteelblue;
-        font-family: 'Bebas Neue';
-    }
-    
-    footer {
-        background-color: lightsteelblue;
-        font-family: 'Bebas Neue';
-        margin: 5px;
-    }
-    
-    button { 
-        padding: 10px;
-        background-color: lightslategray;
-        font-family: 'Bebas Neue';
-        font-size: medium;
-    }
-    
-    button:hover {
-        font-family: 'Bebas Neue';
-        font-size: medium;
-        background-color: lightsteelblue;
-    }
-    
-    input[type=text] {
-        font-family: "Instrument Serif", serif;
-        border: 2px solid lightsteelblue;
-        border-radius: 3px;
-        caret-color: lightsteelblue;
-    }
-    
-    input[type=submit] {
-        font-family: "Instrument Serif", serif;
-        background-color: lightsteelblue;
-        border-radius: 3px;
-        border: 2px solid lightsteelblue;
-    }
-    
-    #greeting {
-        background-color: lightsteelblue;
-        border-style: solid;
-        border-color: black;
-        border-radius: 3px;
-        border-width:2px;
-    }
-    
-    #bandtable { /* make responsive */
-        border-collapse: collapse;
-        table-layout: fixed;
-        width: 100%;
-    }
-    
-    #bandtable td, #bandtable th {
-        border: 2px solid lightsteelblue;
-        padding: 5px;
-    }
-    
-    #bandtable tr:nth-child(even) {
-        background-color: rgb(199, 209, 223);
-    }
-    
-    #bandtable td:hover {
-        background-color: rgb(168, 192, 224);
-    }
-    
-    #bandtable th {
-        padding-top: 8px;
-        padding-bottom: 8px;
-        background-color: rgb(139, 175, 221);
-        color: white;
-    }
-    
-    #bandtablediv {
-        margin: 80px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        border: solid lightsteelblue 5px;
-    }
-    
-    #instphotos {
-        display: flex;
-        justify-content: center;
-        justify-content:  space-between;
-        align-items: center;
-        
-    }
-    
-    #why-band { /* make responsive */
-        text-align: left;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        padding-left: 100px;
-        padding-right: 100px;
-        margin: 80px;
-        border-color: lightsteelblue;
-        border-style: solid;
-        border-width: 5px;
-        background-color: rgba(176, 196, 222, 0.7);
-        background-image: url("images/vector-music-notes-and-signs-set-seamless-pattern-music-symbol-tile-backdrop.jpg");
-        background-repeat: repeat; 
-        background-blend-mode: screen; 
-    }
-    
-    #commentbox { /* make responsive */
-        font-family: "Instrument Serif", serif;
-        resize:both;
-        border-radius: 3px;
-        border: 2px solid lightsteelblue;
-        caret-color: lightsteelblue;
-    }
-    
-    /* begin horizontal rule with center image */
-    /* How to move the right side line over beyond the edge of the trumpet image */
-    .hr-with-image {
-        position: relative;
-        text-align: center;
-        margin: 20px 0;
-    }
-    
-    .hr-with-image::before,
-    .hr-with-image::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        width: 50%;
-        height: 1px;
-        background-color: #000;
-    }
-    
-    .hr-with-image::before {
-        right: 50%;
-    }
-    
-    .hr-with-image::after {
-        left: 50%;
-    }
-    
-    .hr-with-image img {
-        position: relative;
-        align-items: center;
-        top: 3px;
-        rotate: -10deg;
-        padding: 0 10px;
-        background-color: #fff;
-        box-shadow: none;
-    }
-    /* end horizontal rule with center image */
-    
-    .gallery {
-        margin: 10px;
-        border: 1px solid #ccc;
-        float: left;
-        width: 200px;
-        background-color: lightgray;
-    }
-    
-    .gallery:hover {
-        border: 1px solid #777;
-    }
-    
-    .thumbnail {
-        width: 180px;
-        max-height: 150px;
-    }
-    
-    .desc {
-        font-family: "Instrument Serif", serif;
-        text-align: center;
-        resize: vertical;
-        height: 60px;
-    }
-    
-    .photoslast { /* make responsive */
-        position: static;
-        bottom: 30px;
-        width: 100%;
-    }
-    
-    .photosfooter { /* make responsive */
-        display: grid;
-        justify-items: center;
-        place-items: bottom;
-        background-color: lightsteelblue;
-        font-family: 'Bebas Neue';
-    }
-    
-    
-    
+}
+
+#why-band { /* make responsive */
+    text-align: left;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 80px;
+    border-color: lightsteelblue;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgba(176, 196, 222, 0.7);
+    background-image: url("images/vector-music-notes-and-signs-set-seamless-pattern-music-symbol-tile-backdrop.jpg");
+    background-repeat: repeat; 
+    background-blend-mode: screen; 
+}
+
+#commentbox { /* make responsive */
+    font-family: "Instrument Serif", serif;
+    resize:both;
+    border-radius: 3px;
+    border: 2px solid lightsteelblue;
+    caret-color: lightsteelblue;
+}
+
+/* begin horizontal rule with center image */
+.hr-with-image {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hr-with-image::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: calc(50vw - 80px);
+    height: 1px;
+    background-color: #000;
+}
+.hr-with-image::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: calc(47.5vw - 80px);
+    height: 1px;
+    background-color: #000;
+}
+
+.hr-with-image::before {
+    right: 50%;
+}
+
+.hr-with-image::after {
+    left: calc(50% + 40px);
+}
+
+.hr-with-image img {
+    position: relative;
+    align-items: center;
+    top: 3px;
+    rotate: -10deg;
+    padding: 0 10px;
+    background-color: #fff;
+    box-shadow: none;
+}
+/* end horizontal rule with center image */
+
+.galleryWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery {
+    margin: 10px;
+    border: 1px solid #ccc;
+    width: 200px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery:hover {
+    border: 1px solid #777;
+}
+
+.thumbnail {
+    width: 180px;
+    max-height: 150px;
+}
+
+.desc {
+    font-family: "Instrument Serif", serif;
+    text-align: center;
+    height: 60px;
+}
+
+.photoslast {
+    position: static;
+    bottom: 30px;
+    width: 100%;
+}
+
+.photosfooter {
+    display: grid;
+    justify-items: center;
+    place-items: bottom;
+    background-color: lightsteelblue;
+    font-family: 'Bebas Neue';
+}
+
+
